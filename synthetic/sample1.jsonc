@@ -1,0 +1,26 @@
+{
+  // Patient identifier
+  "patient_id": "0011223344",
+  // Date of the assessment
+  "assessment_date": "2023-11-09",
+  // Housing status
+  "housing_status": "Temporary",
+  // Household composition details
+  "household_composition": {
+    "adults": 2,
+    "children": 3
+  },
+  // Highest level of education
+  "education_level": "High school graduate or GED",
+  // Current employment status
+  "employment_status": "Employed",
+  // Insurance status
+  "insurance_status": "Insured",
+  // Array of race/ethnicity identifiers
+  "race_ethnicity": [
+    "Hispanic/Latino",
+    "White"
+  ],
+  // Preferred language
+  "language": "English"
+}
