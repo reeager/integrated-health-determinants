@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PRAPARE_Assessment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <patient_id>0011223344</patient_id>
+  <assessment_date>2023-11-09</assessment_date>
+  <housing_status>Temporary</housing_status>
+  <household_composition>
+    <adults>2</adults>
+    <children>3</children>
+  </household_composition>
+  <education_level>High school graduate or GED</education_level>
+  <employment_status>Employed</employment_status>
+  <insurance_status>Insured</insurance_status>
+  <race_ethnicity>
+    <race>Hispanic/Latino</race>
+    <race>White</race>
+  </race_ethnicity>
+  <language>English</language>
+</PRAPARE_Assessment>
