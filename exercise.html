@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRAPARE Assessment Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  .checkbox-group {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<h2>PRAPARE Assessment Form</h2>
+
+<form action="/submit-form" method="post">
+  <div class="form-group">
+    <label for="patient_id">Patient ID:</label>
+    <input type="text" id="patient_id" name="patient_id" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="assessment_date">Assessment Date:</label>
+    <input type="date" id="assessment_date" name="assessment_date" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="housing_status">Housing Status:</label>
+    <select id="housing_status" name="housing_status" required>
+      <option value="">Select one</option>
+      <option value="Stable">Stable</option>
+      <option value="Temporary">Temporary</option>
+      <option value="Unstable">Unstable</option>
+      <option value="Homeless">Homeless</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label>Household Composition:</label>
+    <label for="adults">Number of Adults:</label>
+    <input type="number" id="adults" name="household_composition[adults]" min="0" required>
+    <label for="children">Number of Children:</label>
+    <input type="number" id="children" name="household_composition[children]" min="0" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="education_level">Education Level:</label>
+    <select id="education_level" name="education_level" required>
+      <option value="">Select one</option>
+      <option value="Less than high school">Less than high school</option>
+      <option value="High school graduate or GED">High school graduate or GED</option>
+      <option value="Some college or technical school">Some college or technical school</option>
+      <option value="College graduate">College graduate</option>
+      <option value="Postgraduate">Postgraduate</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="employment_status">Employment Status:</label>
+    <select id="employment_status" name="employment_status" required>
+      <option value="">Select one</option>
+      <option value="Employed">Employed</option>
+      <option value="Unemployed">Unemployed</option>
+      <option value="Student">Student</option>
+      <option value="Retired">Retired</option>
+      <option value="Unable to work">Unable to work</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="insurance_status">Insurance Status:</label>
+    <select id="insurance_status" name="insurance_status" required>
+      <option value="">Select one</option>
+      <option value="Insured">Insured</option>
+      <option value="Uninsured">Uninsured</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label>Race/Ethnicity (select all that apply):</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="race_ethnicity" value="American Indian/Alaskan Native"> American Indian/Alaskan Native</label>
+      <label><input type="checkbox" name="race_ethnicity" value="Asian"> Asian</label>
+      <label><input type="checkbox" name="race_ethnicity" value="Black/African American"> Black/African American</label>
+      <label><input type="checkbox" name="race_ethnicity" value="Hispanic/Latino"> Hispanic/Latino</label>
+      <label><input type="checkbox" name="race_ethnicity" value="Native Hawaiian/Other Pacific Islander"> Native Hawaiian/Other Pacific Islander</label>
+      <label><input type="checkbox" name="race_ethnicity" value="White"> White</label>
+      <label><input type="checkbox" name="race_ethnicity" value="Other"> Other</label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="language">Preferred Language:</label>
+    <input type="text" id="language" name="language" required>
+  </div>
+  
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
