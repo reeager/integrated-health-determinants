@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "PRAPARE Assessment",
-  "description": "Schema for the PRAPARE (Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences) Assessment Form",
+  "description": "Extended schema for the PRAPARE (Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences) Assessment Form",
   "type": "object",
   "properties": {
     "patient_id": {
@@ -18,52 +18,25 @@
       "enum": ["Stable", "Temporary", "Unstable", "Homeless"],
       "description": "The patient's housing status"
     },
-    "transportation": {
-      "type": "string",
-      "enum": ["No issues", "Some issues", "Significant issues"],
-      "description": "The patient's transportation reliability"
-    },
-    "food_insecurity": {
-      "type": "boolean",
-      "description": "If the patient has concerns about food security"
-    },
-    "utilities": {
-      "type": "boolean",
-      "description": "If the patient has trouble paying their utilities"
-    },
-    "social_integration": {
-      "type": "boolean",
-      "description": "If the patient feels socially isolated"
-    },
-    "income": {
+    "household_composition": {
       "type": "object",
       "properties": {
-        "level": {
-          "type": "string",
-          "description": "Income level"
+        "adults": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of adults in the household"
         },
-        "source": {
-          "type": "string",
-          "description": "Primary source of income"
+        "children": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of children in the household"
         }
       },
-      "required": ["level", "source"]
-    },
-    "insurance_status": {
-      "type": "string",
-      "enum": ["Insured", "Uninsured"],
-      "description": "The patient's insurance status"
-    },
-    "race_ethnicity": {
-      "type": "string",
-      "description": "The patient's race/ethnicity"
-    },
-    "language": {
-      "type": "string",
-      "description": "The patient's preferred language"
+      "required": ["adults", "children"]
     },
     "education_level": {
       "type": "string",
+      "enum": ["Less than high school", "High school graduate or GED", "Some college or technical school", "College graduate", "Postgraduate"],
       "description": "The patient's highest level of education"
     },
     "employment_status": {
@@ -71,24 +44,33 @@
       "enum": ["Employed", "Unemployed", "Student", "Retired", "Unable to work"],
       "description": "The patient's employment status"
     },
-    "health_coverage": {
+    "insurance_status": {
       "type": "string",
-      "description": "Type of health coverage, if any"
+      "enum": ["Insured", "Uninsured"],
+      "description": "The patient's insurance status"
+    },
+    "race_ethnicity": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["American Indian/Alaskan Native", "Asian", "Black/African American", "Hispanic/Latino", "Native Hawaiian/Other Pacific Islander", "White", "Other"]
+      },
+      "description": "The patient's race/ethnicity"
+    },
+    "language": {
+      "type": "string",
+      "description": "The patient's preferred language"
     }
   },
   "required": [
     "patient_id",
     "assessment_date",
     "housing_status",
-    "transportation",
-    "food_insecurity",
-    "utilities",
-    "social_integration",
-    "income",
+    "household_composition",
+    "education_level",
+    "employment_status",
     "insurance_status",
     "race_ethnicity",
-    "language",
-    "education_level",
-    "employment_status"
+    "language"
   ]
 }
