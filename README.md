@@ -20,3 +20,6 @@ We're starting with the popular PRAPARE assessment tool, provided by the Nationa
 - **Data Integration**: Ensure that data from the PRAPARE form can be easily integrated with other health data systems, providing a holistic view of patient health determinants.
 - **Data Reporting**: Facilitate the generation of reports that can drive decision-making and influence policy to improve patient outcomes.
 
+## Example of Simplified HTML Data Capture
+
+![PRAPARE HTML Screenshot](PRAPARE-html-screenshot.png)
