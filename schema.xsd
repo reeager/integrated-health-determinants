@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="PRAPARE_Assessment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="patient_id" type="xs:string"/>
+        <xs:element name="assessment_date" type="xs:date"/>
+        <xs:element name="housing_status">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Stable"/>
+              <xs:enumeration value="Temporary"/>
+              <xs:enumeration value="Unstable"/>
+              <xs:enumeration value="Homeless"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="household_composition">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="adults" type="xs:integer"/>
+              <xs:element name="children" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="education_level">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Less than high school"/>
+              <xs:enumeration value="High school graduate or GED"/>
+              <xs:enumeration value="Some college or technical school"/>
+              <xs:enumeration value="College graduate"/>
+              <xs:enumeration value="Postgraduate"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="employment_status">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Employed"/>
+              <xs:enumeration value="Unemployed"/>
+              <xs:enumeration value="Student"/>
+              <xs:enumeration value="Retired"/>
+              <xs:enumeration value="Unable to work"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="insurance_status">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Insured"/>
+              <xs:enumeration value="Uninsured"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="race_ethnicity">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="race" maxOccurs="unbounded">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="American Indian/Alaskan Native"/>
+                    <xs:enumeration value="Asian"/>
+                    <xs:enumeration value="Black/African American"/>
+                    <xs:enumeration value="Hispanic/Latino"/>
+                    <xs:enumeration value="Native Hawaiian/Other Pacific Islander"/>
+                    <xs:enumeration value="White"/>
+                    <xs:enumeration value="Other"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="language" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
