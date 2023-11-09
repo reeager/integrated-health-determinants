@@ -1,0 +1,110 @@
+[
+  {
+    "resourceType": "QuestionnaireResponse",
+    "id": "QR1",
+    "subject": {
+      "reference": "Patient/0011223344"
+    },
+    "questionnaire": "Questionnaire/PRAPARE01",
+    "status": "completed",
+    "authored": "2023-11-09T00:00:00Z",
+    "source": {
+      "reference": "Practitioner/1234"
+    },
+    "item": [
+      {
+        "linkId": "1",
+        "text": "Housing Status",
+        "answer": [
+          {
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/housing-status",
+              "code": "temp",
+              "display": "Temporary"
+            }
+          }
+        ]
+      },
+      {
+        "linkId": "2",
+        "text": "Transportation",
+        "answer": [
+          {
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/transportation-status",
+              "code": "public",
+              "display": "Public"
+            }
+          }
+        ]
+      },
+      {
+        "linkId": "3",
+        "text": "Food Security",
+        "answer": [
+          {
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/food-security-status",
+              "code": "sometimes",
+              "display": "Sometimes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "resourceType": "QuestionnaireResponse",
+    "id": "QR2",
+    "subject": {
+      "reference": "Patient/0011223345"
+    },
+    "questionnaire": "Questionnaire/PRAPARE02",
+    "status": "completed",
+    "authored": "2023-11-10T00:00:00Z",
+    "source": {
+      "reference": "Practitioner/5678"
+    },
+    "item": [
+      {
+        "linkId": "1",
+        "text": "Housing Status",
+        "answer": [
+          {
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/housing-status",
+              "code": "stable",
+              "display": "Stable"
+            }
+          }
+        ]
+      },
+      {
+        "linkId": "2",
+        "text": "Transportation",
+        "answer": [
+          {
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/transportation-status",
+              "code": "ownCar",
+              "display": "Owns Car"
+            }
+          }
+        ]
+      },
+      {
+        "linkId": "3",
+        "text": "Food Security",
+        "answer": [
+          {
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/food-security-status",
+              "code": "always",
+              "display": "Always"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
