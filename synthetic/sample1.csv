@@ -1,0 +1,11 @@
+patient_id,assessment_date,housing_status,adults_in_household,children_in_household,education_level,employment_status,insurance_status,race_ethnicity,preferred_language
+0011223344,2023-11-09,Temporary,2,3,High school graduate or GED,Employed,Insured,Hispanic/Latino;White,English
+0011223345,2023-11-10,Stable,1,1,College graduate,Unemployed,Uninsured,Black/African American,English
+0011223346,2023-11-11,Homeless,1,0,Less than high school,Unable to work,Insured,White,Spanish
+0011223347,2023-11-12,Unstable,2,2,Some college or technical school,Employed,Insured,Asian,English
+0011223348,2023-11-13,Stable,3,1,Postgraduate,Retired,Insured,Hispanic/Latino,Spanish
+0011223349,2023-11-14,Temporary,1,2,High school graduate or GED,Student,Insured,Native Hawaiian/Other Pacific Islander,English
+0011223350,2023-11-15,Stable,2,3,College graduate,Employed,Insured,Black/African American;Hispanic/Latino,English
+0011223351,2023-11-16,Unstable,1,1,Some college or technical school,Unemployed,Uninsured,Asian,Chinese
+0011223352,2023-11-17,Stable,2,0,Postgraduate,Employed,Insured,White,English
+0011223353,2023-11-18,Homeless,0,0,Less than high school,Unable to work,Uninsured,American Indian/Alaskan Native,English
