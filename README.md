@@ -4,7 +4,7 @@ Welcome to the Integrated-Health-Determinants repository, a collaborative repo d
 
 ## Starting with PRAPARE
 
-We're starting with the popular PRAPARE assessment tool, provided by . The PRAPARE form is a standardized tool used to collect data on the social determinants of health (SDOH), offering insights into the broader context of patients' lives that significantly impact their health outcomes. However the screening tool for the 1115 Waiver will most likely be AHC HRSN by CMS. This folder will be built out to provide the schemas and integration tools for this screening in the future. 
+We're starting with the popular PRAPARE assessment tool. The PRAPARE form is a standardized tool used to collect data on the social determinants of health (SDOH), offering insights into the broader context of patients' lives that significantly impact their health outcomes. However the screening tool for the 1115 Waiver will most likely be AHC HRSN by CMS. This folder will be built out to provide the schemas and integration tools for this screening in the future. 
 
 ### What We Provide
 
